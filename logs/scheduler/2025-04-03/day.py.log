@@ -471,3 +471,227 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'scripts'
 [2025-04-03T18:34:39.311+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
 [2025-04-03T18:34:39.344+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.050 seconds
+[2025-04-03T18:35:09.508+0000] {processor.py:153} INFO - Started process (PID=198) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:35:09.517+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:35:09.518+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:35:09.518+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:35:09.527+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:35:09.526+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:35:09.528+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:35:09.555+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.051 seconds
+[2025-04-03T18:35:39.693+0000] {processor.py:153} INFO - Started process (PID=203) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:35:39.702+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:35:39.703+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:35:39.703+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:35:39.712+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:35:39.711+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:35:39.713+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:35:39.741+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.052 seconds
+[2025-04-03T18:36:09.888+0000] {processor.py:153} INFO - Started process (PID=208) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:36:09.897+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:36:09.898+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:36:09.897+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:36:09.907+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:36:09.905+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:36:09.907+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:36:09.939+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.055 seconds
+[2025-04-03T18:36:40.080+0000] {processor.py:153} INFO - Started process (PID=213) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:36:40.081+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:36:40.081+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:36:40.081+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:36:40.092+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:36:40.090+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:36:40.092+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:36:40.119+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.044 seconds
+[2025-04-03T18:37:10.295+0000] {processor.py:153} INFO - Started process (PID=218) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:37:10.304+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:37:10.305+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:37:10.304+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:37:10.313+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:37:10.312+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:37:10.313+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:37:10.344+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.053 seconds
+[2025-04-03T18:37:40.506+0000] {processor.py:153} INFO - Started process (PID=223) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:37:40.507+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:37:40.508+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:37:40.508+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:37:40.517+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:37:40.516+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:37:40.517+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:37:40.546+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.044 seconds
+[2025-04-03T18:38:10.741+0000] {processor.py:153} INFO - Started process (PID=228) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:38:10.750+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:38:10.751+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:38:10.751+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:38:10.762+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:38:10.760+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:38:10.762+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:38:10.794+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.057 seconds
+[2025-04-03T18:38:40.959+0000] {processor.py:153} INFO - Started process (PID=233) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:38:40.960+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:38:40.961+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:38:40.960+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:38:40.968+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:38:40.967+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:38:40.969+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:38:40.998+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.045 seconds
+[2025-04-03T18:39:11.187+0000] {processor.py:153} INFO - Started process (PID=238) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:39:11.188+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:39:11.189+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:39:11.189+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:39:11.200+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:39:11.199+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:39:11.201+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:39:11.232+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.051 seconds
+[2025-04-03T18:39:41.372+0000] {processor.py:153} INFO - Started process (PID=243) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:39:41.372+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:39:41.373+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:39:41.373+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:39:41.381+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:39:41.380+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:39:41.382+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:39:41.410+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.043 seconds
+[2025-04-03T18:40:11.606+0000] {processor.py:153} INFO - Started process (PID=248) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:40:11.607+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:40:11.608+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:40:11.607+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:40:11.615+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:40:11.614+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:40:11.615+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:40:11.643+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.043 seconds
+[2025-04-03T18:40:41.806+0000] {processor.py:153} INFO - Started process (PID=253) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:40:41.807+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:40:41.808+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:40:41.808+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:40:41.818+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:40:41.817+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:40:41.819+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:40:41.846+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.046 seconds
+[2025-04-03T18:41:12.028+0000] {processor.py:153} INFO - Started process (PID=258) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:41:12.029+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:41:12.030+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:41:12.030+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:41:12.039+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:41:12.038+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:41:12.039+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:41:12.067+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.044 seconds
+[2025-04-03T18:41:42.239+0000] {processor.py:153} INFO - Started process (PID=263) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:41:42.248+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:41:42.250+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:41:42.249+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:41:42.259+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:41:42.258+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:41:42.259+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:41:42.290+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.056 seconds
+[2025-04-03T18:42:53.004+0000] {processor.py:153} INFO - Started process (PID=203) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:42:53.005+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:42:53.005+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:42:53.005+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:42:53.013+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:42:53.012+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:42:53.013+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:42:53.029+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.027 seconds
+[2025-04-03T18:43:23.325+0000] {processor.py:153} INFO - Started process (PID=209) to work on /opt/airflow/dags/day.py
+[2025-04-03T18:43:23.326+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-03T18:43:23.327+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:43:23.326+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-03T18:43:23.335+0000] {logging_mixin.py:137} INFO - [2025-04-03T18:43:23.334+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/day.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/day.py", line 4, in <module>
+    from scripts.task_functions import task_1, task_2  # Import the functions from the script
+ModuleNotFoundError: No module named 'scripts'
+[2025-04-03T18:43:23.335+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/day.py
+[2025-04-03T18:43:23.363+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.043 seconds

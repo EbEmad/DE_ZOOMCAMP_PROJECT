@@ -11,7 +11,7 @@ airflow users create \
         --firstname Ebrahim \
         --lastname Emad \
         --role Admin \
-        --emial admin@example.com \
+        --email admin@example.com \
         --password admin
 echo "Starting $1..."
 exec airflow "$1"
