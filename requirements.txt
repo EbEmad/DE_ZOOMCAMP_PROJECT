@@ -1,0 +1,7 @@
+pandas
+requests
+beautifulsoup4
+sqlalchemy
+pyarrow
+apache-airflow-providers-docker
+docker
