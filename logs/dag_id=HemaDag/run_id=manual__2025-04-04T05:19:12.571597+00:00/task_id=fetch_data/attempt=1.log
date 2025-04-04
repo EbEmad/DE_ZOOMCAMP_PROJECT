@@ -1,0 +1,34 @@
+[2025-04-04T05:19:13.300+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.fetch_data manual__2025-04-04T05:19:12.571597+00:00 [queued]>
+[2025-04-04T05:19:13.306+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.fetch_data manual__2025-04-04T05:19:12.571597+00:00 [queued]>
+[2025-04-04T05:19:13.306+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-04T05:19:13.306+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-04T05:19:13.306+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-04T05:19:13.315+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): fetch_data> on 2025-04-04 05:19:12.571597+00:00
+[2025-04-04T05:19:13.321+0000] {standard_task_runner.py:55} INFO - Started process 225 to run task
+[2025-04-04T05:19:13.324+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'HemaDag', 'fetch_data', 'manual__2025-04-04T05:19:12.571597+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmpf2s7embq']
+[2025-04-04T05:19:13.326+0000] {standard_task_runner.py:83} INFO - Job 2: Subtask fetch_data
+[2025-04-04T05:19:13.368+0000] {task_command.py:388} INFO - Running <TaskInstance: HemaDag.fetch_data manual__2025-04-04T05:19:12.571597+00:00 [running]> on host 02c55f5ad405
+[2025-04-04T05:19:13.422+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=HemaDag
+AIRFLOW_CTX_TASK_ID=fetch_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-04T05:19:12.571597+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-04T05:19:12.571597+00:00
+[2025-04-04T05:19:13.422+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-04-04T05:19:13.423+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/dags/scripts/Extract.py']
+[2025-04-04T05:19:13.436+0000] {subprocess.py:86} INFO - Output:
+[2025-04-04T05:19:13.498+0000] {subprocess.py:93} INFO - python3: can't open file '/opt/***/dags/scripts/Extract.py': [Errno 2] No such file or directory
+[2025-04-04T05:19:13.501+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-04-04T05:19:13.510+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-04-04T05:19:13.513+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=HemaDag, task_id=fetch_data, execution_date=20250404T051912, start_date=20250404T051913, end_date=20250404T051913
+[2025-04-04T05:19:13.523+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 2 for task fetch_data (Bash command failed. The command returned a non-zero exit code 2.; 225)
+[2025-04-04T05:19:13.535+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2025-04-04T05:19:13.550+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

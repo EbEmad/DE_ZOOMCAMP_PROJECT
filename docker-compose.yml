@@ -6,6 +6,9 @@ services:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
+    ports:
+      - "5432:5432"
+    restart: always
 
   webserver:
     build: .
@@ -18,6 +21,9 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data       
+
     ports:
       - "8080:8080"
     entrypoint: /entrypoint.sh
@@ -34,5 +40,8 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data       
+
     entrypoint: /entrypoint.sh
     command: scheduler

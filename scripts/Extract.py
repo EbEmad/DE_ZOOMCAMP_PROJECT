@@ -3,12 +3,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import os
 
-def get_data(output_dir='data'):
+def get_data(output_dir='/opt/airflow/data/'):
     try:
-        
-        if os.path.exists(output_dir):
-            print(f"{output_dir} already exists , skipping downloading")
-            return None
         os.makedirs(output_dir,exist_ok=True)
         url = "https://www.worldometers.info/world-population/population-by-country/"
         response = requests.get(url)
@@ -32,7 +28,4 @@ def get_data(output_dir='data'):
     
     except Exception as e:
         raise Exception(f"ERROR: {e}")
-
-# Usage
-if __name__=='__main__':
-    get_data()
+get_data()

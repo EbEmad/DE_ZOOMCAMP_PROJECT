@@ -1,28 +1,22 @@
 from airflow import DAG
+from airflow.operators.postgres_operator import PostgresOperator
+from datetime import datetime,timedelta
 from airflow.operators.python import PythonOperator
-from airflow.utils.dates import days_ago
-from scripts.task_functions import task_1, task_2  # Import the functions from the script
+from airflow.operators.bash import BashOperator
 
 # Define the DAG
 with DAG(
-    'example_dag_2',
-    description='A DAG with dependent tasks',
-    schedule_interval='@daily',
-    start_date=days_ago(1),
+    'HemaDag',
+    description='A simple DAG for python code',
+    start_date=datetime(2025, 4, 4),
+    schedule_interval='@weekly',
     catchup=False
+
+
 ) as dag:
-    # Define task 1 using PythonOperator
-    task_1_operator = PythonOperator(
-        task_id='task_1',
-        python_callable=task_1
+    fetch_data= BashOperator(
+        task_id='fetch_data',
+        bash_command='python3 /opt/airflow/scripts/Extract.py',
+        dag=dag
     )
-
-    # Define task 2 using PythonOperator
-    task_2_operator = PythonOperator(
-        task_id='task_2',
-        python_callable=task_2
-    )
-
-    # Set task dependencies
-    task_1_operator >> task_2_operator
-    # This means that task_2_operator will run only after task_1_operator completes successfully
+    
