@@ -25,6 +25,7 @@ def get_data(output_dir='/opt/airflow/data/'):
             df.to_csv(output_path,index=False)
             print(f"Table {i} saved to: {output_path}")
         print(f"\nAll {len(tables)} tables saved to '{output_dir}'!")
+        return output_path
     
     except Exception as e:
         raise Exception(f"ERROR: {e}")
