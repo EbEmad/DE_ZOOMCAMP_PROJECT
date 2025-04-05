@@ -1986,3 +1986,17 @@
 [2025-04-05T16:18:16.875+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:18:16.874+0000] {dag.py:2690} INFO - Sync 1 DAGs
 [2025-04-05T16:18:16.915+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:18:16.915+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
 [2025-04-05T16:18:16.956+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.192 seconds
+[2025-04-05T16:18:47.127+0000] {processor.py:153} INFO - Started process (PID=914) to work on /opt/airflow/dags/day.py
+[2025-04-05T16:18:47.136+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-05T16:18:47.137+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:18:47.137+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-05T16:18:47.160+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-05T16:18:47.177+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:18:47.177+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-05T16:18:47.198+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:18:47.198+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-05T16:18:47.209+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.085 seconds
+[2025-04-05T16:19:17.262+0000] {processor.py:153} INFO - Started process (PID=919) to work on /opt/airflow/dags/day.py
+[2025-04-05T16:19:17.271+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-05T16:19:17.272+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:19:17.272+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-05T16:19:17.297+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-05T16:19:17.314+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:19:17.314+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-05T16:19:17.334+0000] {logging_mixin.py:137} INFO - [2025-04-05T16:19:17.334+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-05T16:19:17.347+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.087 seconds

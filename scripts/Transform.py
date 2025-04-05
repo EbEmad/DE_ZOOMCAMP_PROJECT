@@ -1,9 +1,15 @@
 import pandas as pd
+from Extract import get_data
+import os
+
+
+
 
 
 def transform_data():
     # Read the CSV file
-    df=pd.read_csv('./data/table_1.csv')
+    path=get_data()
+    df=pd.read_csv(path)
 
     # rename columns into correct format
     df.rename(columns={'#':'Index'},inplace=True)
