@@ -8,7 +8,7 @@ from airflow.operators.bash import BashOperator
 with DAG(
     'HemaDag',
     description='A simple DAG for python code',
-    start_date=datetime(2025, 4, 4),
+    start_date=datetime(2025, 4, 6),
     schedule_interval='@weekly',
     catchup=False
 
@@ -19,4 +19,11 @@ with DAG(
         bash_command='python3 /opt/airflow/scripts/Extract.py',
         dag=dag
     )
+    transform_data= BashOperator(
+        task_id='Transform_data',
+        bash_command='python3 /opt/airflow/scripts/Transform.py',
+        dag=dag
+    )
+
+    fetch_data >> transform_data
     

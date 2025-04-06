@@ -2,10 +2,6 @@ import pandas as pd
 from Extract import get_data
 import os
 
-
-
-
-
 def transform_data():
     # Read the CSV file
     path=get_data()
@@ -39,8 +35,6 @@ def transform_data():
     df['Migrants']=df['Migrants'].apply(lambda x:x.replace(',','') if isinstance(x,str) and ',' in x else  x)
     df['Density']=df['Density'].apply(lambda x:x.replace(',','') if isinstance(x,str) and ',' in x else  x)
 
-
-
     # Edit the Dtypes of columns
     df['WorldShare']=df['WorldShare'].astype(float)
     df['UrbanPop']=df['UrbanPop'].astype(float)
@@ -54,3 +48,9 @@ def transform_data():
     df['Country']=df['Country'].astype(str)
 
 
+    # save the data
+    os.makedirs('/opt/airflow/data/', exist_ok=True)
+
+# Save the DataFrame
+    df.to_csv('/opt/airflow/data/Transformed_data.csv', index=False)
+transform_data()
