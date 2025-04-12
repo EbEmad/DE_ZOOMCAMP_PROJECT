@@ -6697,3 +6697,196 @@
 [2025-04-12T17:00:57.776+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:00:57.776+0000] {dag.py:2690} INFO - Sync 1 DAGs
 [2025-04-12T17:00:57.814+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:00:57.814+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
 [2025-04-12T17:00:57.851+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.180 seconds
+[2025-04-12T17:01:28.065+0000] {processor.py:153} INFO - Started process (PID=329) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:01:28.074+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:01:28.074+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:01:28.074+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:01:28.127+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:01:28.166+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:01:28.166+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:01:28.206+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:01:28.205+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:01:28.232+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.173 seconds
+[2025-04-12T17:01:58.439+0000] {processor.py:153} INFO - Started process (PID=334) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:01:58.448+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:01:58.449+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:01:58.449+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:01:58.501+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:01:58.539+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:01:58.539+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:01:58.574+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:01:58.574+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:01:58.598+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.164 seconds
+[2025-04-12T17:02:28.803+0000] {processor.py:153} INFO - Started process (PID=339) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:02:28.812+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:02:28.813+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:02:28.813+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:02:28.863+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:02:28.898+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:02:28.898+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:02:28.933+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:02:28.933+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:02:28.964+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.166 seconds
+[2025-04-12T17:02:59.005+0000] {processor.py:153} INFO - Started process (PID=344) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:02:59.014+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:02:59.015+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:02:59.015+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:02:59.065+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:02:59.102+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:02:59.102+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:02:59.139+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:02:59.139+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:02:59.172+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.171 seconds
+[2025-04-12T17:03:29.355+0000] {processor.py:153} INFO - Started process (PID=349) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:03:29.364+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:03:29.366+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:03:29.366+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:03:29.431+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:03:29.475+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:03:29.475+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:03:29.535+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:03:29.535+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:03:29.581+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.231 seconds
+[2025-04-12T17:03:59.786+0000] {processor.py:153} INFO - Started process (PID=354) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:03:59.795+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:03:59.796+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:03:59.796+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:03:59.845+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:03:59.881+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:03:59.881+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:03:59.917+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:03:59.917+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:03:59.950+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.168 seconds
+[2025-04-12T17:04:30.155+0000] {processor.py:153} INFO - Started process (PID=359) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:04:30.156+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:04:30.157+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:04:30.157+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:04:30.216+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:04:30.275+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:04:30.274+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:04:30.335+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:04:30.334+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:04:30.381+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.232 seconds
+[2025-04-12T17:05:00.592+0000] {processor.py:153} INFO - Started process (PID=364) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:05:00.601+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:05:00.602+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:05:00.602+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:05:00.652+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:05:00.691+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:05:00.691+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:05:00.727+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:05:00.726+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:05:00.757+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.170 seconds
+[2025-04-12T17:05:30.959+0000] {processor.py:153} INFO - Started process (PID=369) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:05:30.961+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:05:30.962+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:05:30.961+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:05:31.018+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:05:31.056+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:05:31.055+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:05:31.095+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:05:31.095+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:05:31.124+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.170 seconds
+[2025-04-12T17:06:01.322+0000] {processor.py:153} INFO - Started process (PID=374) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:06:01.331+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:06:01.332+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:06:01.332+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:06:01.394+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:06:01.439+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:06:01.438+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:06:01.478+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:06:01.477+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:06:01.505+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.188 seconds
+[2025-04-12T17:06:31.714+0000] {processor.py:153} INFO - Started process (PID=379) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:06:31.723+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:06:31.725+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:06:31.724+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:06:31.778+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:06:31.814+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:06:31.814+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:06:31.849+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:06:31.849+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:06:31.891+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.182 seconds
+[2025-04-12T17:07:02.096+0000] {processor.py:153} INFO - Started process (PID=384) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:07:02.105+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:07:02.106+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:07:02.106+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:07:02.154+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:07:02.192+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:07:02.191+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:07:02.230+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:07:02.230+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:07:02.253+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.163 seconds
+[2025-04-12T17:07:32.463+0000] {processor.py:153} INFO - Started process (PID=389) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:07:32.464+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:07:32.465+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:07:32.465+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:07:32.526+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:07:32.572+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:07:32.572+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:07:32.620+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:07:32.619+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:07:32.661+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.205 seconds
+[2025-04-12T17:08:02.872+0000] {processor.py:153} INFO - Started process (PID=394) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:08:02.881+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:08:02.882+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:08:02.882+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:08:02.933+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:08:02.972+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:08:02.972+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:08:03.012+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:08:03.011+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:08:03.051+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.184 seconds
+[2025-04-12T17:08:33.258+0000] {processor.py:153} INFO - Started process (PID=399) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:08:33.259+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:08:33.260+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:08:33.260+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:08:33.313+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:08:33.351+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:08:33.351+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:08:33.394+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:08:33.394+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:08:33.418+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.165 seconds
+[2025-04-12T17:09:03.639+0000] {processor.py:153} INFO - Started process (PID=404) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:09:03.642+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:09:03.643+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:09:03.643+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:09:03.702+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:09:03.745+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:09:03.744+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:09:03.790+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:09:03.789+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:09:03.822+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.188 seconds
+[2025-04-12T17:09:34.033+0000] {processor.py:153} INFO - Started process (PID=409) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:09:34.042+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:09:34.043+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:09:34.043+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:09:34.094+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:09:34.131+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:09:34.130+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:09:34.168+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:09:34.167+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:09:34.207+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.179 seconds
+[2025-04-12T17:10:04.411+0000] {processor.py:153} INFO - Started process (PID=414) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:10:04.420+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:10:04.421+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:10:04.421+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:10:04.476+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:10:04.513+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:10:04.512+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:10:04.556+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:10:04.556+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:10:04.594+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.188 seconds
+[2025-04-12T17:10:34.792+0000] {processor.py:153} INFO - Started process (PID=419) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:10:34.802+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:10:34.803+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:10:34.803+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:10:34.853+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:10:34.890+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:10:34.890+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:10:34.926+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:10:34.926+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:10:34.960+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.173 seconds
+[2025-04-12T17:11:05.166+0000] {processor.py:153} INFO - Started process (PID=424) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:11:05.175+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:11:05.176+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:11:05.176+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:11:05.233+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:11:05.276+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:11:05.275+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:11:05.320+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:11:05.320+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:11:05.357+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.195 seconds
+[2025-04-12T17:11:35.568+0000] {processor.py:153} INFO - Started process (PID=429) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:11:35.577+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:11:35.579+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:11:35.579+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:11:35.638+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:11:35.688+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:11:35.688+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:11:35.734+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:11:35.734+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:11:35.768+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.206 seconds
+[2025-04-12T17:12:05.975+0000] {processor.py:153} INFO - Started process (PID=434) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:12:05.984+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:12:05.985+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:12:05.985+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:12:06.035+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:12:06.071+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:12:06.071+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:12:06.108+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:12:06.108+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:12:06.147+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.178 seconds
+[2025-04-12T17:12:36.352+0000] {processor.py:153} INFO - Started process (PID=439) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:12:36.361+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:12:36.362+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:12:36.362+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:12:36.426+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:12:36.468+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:12:36.468+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:12:36.511+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:12:36.511+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:12:36.554+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.209 seconds
+[2025-04-12T17:19:11.223+0000] {processor.py:153} INFO - Started process (PID=203) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:19:11.224+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:19:11.225+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:11.224+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:19:11.384+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:19:11.476+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:11.476+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:HemaDag
+[2025-04-12T17:19:11.482+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:11.482+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:HemaDag
+[2025-04-12T17:19:11.488+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:11.488+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:HemaDag
+[2025-04-12T17:19:11.488+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:11.488+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:19:11.496+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:11.496+0000] {dag.py:2711} INFO - Creating ORM DAG for HemaDag
+[2025-04-12T17:19:11.504+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:11.504+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:19:11.515+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.294 seconds
+[2025-04-12T17:19:41.553+0000] {processor.py:153} INFO - Started process (PID=209) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:19:41.555+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:19:41.555+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:41.555+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:19:41.617+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:19:41.662+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:41.662+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:19:41.705+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:19:41.704+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:19:41.742+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.193 seconds
+[2025-04-12T17:20:11.866+0000] {processor.py:153} INFO - Started process (PID=214) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:20:11.874+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:20:11.876+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:20:11.875+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:20:11.928+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:20:11.963+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:20:11.963+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:20:11.998+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:20:11.998+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:20:12.021+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.160 seconds
+[2025-04-12T17:20:42.107+0000] {processor.py:153} INFO - Started process (PID=219) to work on /opt/airflow/dags/day.py
+[2025-04-12T17:20:42.119+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/day.py for tasks to queue
+[2025-04-12T17:20:42.120+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:20:42.120+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/day.py
+[2025-04-12T17:20:42.170+0000] {processor.py:753} INFO - DAG(s) dict_keys(['HemaDag']) retrieved from /opt/airflow/dags/day.py
+[2025-04-12T17:20:42.207+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:20:42.207+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2025-04-12T17:20:42.244+0000] {logging_mixin.py:137} INFO - [2025-04-12T17:20:42.244+0000] {dag.py:3441} INFO - Setting next_dagrun for HemaDag to 2025-04-06T00:00:00+00:00, run_after=2025-04-13T00:00:00+00:00
+[2025-04-12T17:20:42.284+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/day.py took 0.182 seconds

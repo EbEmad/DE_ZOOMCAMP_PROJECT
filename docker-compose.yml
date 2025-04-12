@@ -45,3 +45,13 @@ services:
 
     entrypoint: /entrypoint.sh
     command: scheduler
+  terraform:
+    build:
+      context: .
+      dockerfile: dockerfile.terraform
+    image: ubuntu:latest
+    container_name: terraform
+    volumes:
+      - ./terraform:/terraform
+      - ./data:/terraform/data
+    working_dir: /terraform
