@@ -1,0 +1,4 @@
+
+# Ignore json files, including credentials
+keys/
+*.json
