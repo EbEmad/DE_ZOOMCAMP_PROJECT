@@ -22,7 +22,10 @@ with DAG(
     transform_data= BashOperator(
         task_id='Transform_data',
         bash_command='python3 /opt/airflow/scripts/Transform.py',
-        dag=dag
+        dag=dag,
+        op_args=[],
+        op_kwargs={'doc': "{{ task_instance.xcom_pull(task_ids='fetch_data_task') }}"},
+        provide_context=True,
     )
 
     fetch_data >> transform_data

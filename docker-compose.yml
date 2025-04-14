@@ -55,3 +55,43 @@ services:
       - ./terraform:/terraform
       - ./data:/terraform/data
     working_dir: /terraform
+  
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    healthcheck:
+      test: ["CMD", "echo", "ruok", "|", "nc", "-z", "localhost", "2181"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  kafka:
+    build:
+      context: .
+      dockerfile: dockerfile.kafka
+    image: my-kafka-custom
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      - KAFKA_CFG_BROKER_ID=1
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/bitnami/kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    volumes:
+      - ./create-topics.sh:/create-topics.sh
+    entrypoint: ["/opt/bitnami/scripts/kafka/entrypoint.sh"]
+    command: ["/bin/bash", "-c", "/opt/bitnami/scripts/kafka/run.sh & sleep 30 && /create-topics.sh && wait"]
+    depends_on:
+      - zookeeper
