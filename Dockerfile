@@ -20,4 +20,3 @@ RUN usermod -aG docker airflow
 USER airflow
 
 ENTRYPOINT [ "/entrypoint.sh" ]
-

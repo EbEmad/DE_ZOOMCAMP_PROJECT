@@ -1,0 +1,26 @@
+[2025-04-15T08:26:46.840+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Anas.fetch_data_task manual__2025-04-15T08:26:45.474532+00:00 [queued]>
+[2025-04-15T08:26:46.845+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Anas.fetch_data_task manual__2025-04-15T08:26:45.474532+00:00 [queued]>
+[2025-04-15T08:26:46.845+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-15T08:26:46.845+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-15T08:26:46.846+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-15T08:26:46.853+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): fetch_data_task> on 2025-04-15 08:26:45.474532+00:00
+[2025-04-15T08:26:46.861+0000] {standard_task_runner.py:55} INFO - Started process 294 to run task
+[2025-04-15T08:26:46.863+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Anas', 'fetch_data_task', 'manual__2025-04-15T08:26:45.474532+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmppur15kh2']
+[2025-04-15T08:26:46.864+0000] {standard_task_runner.py:83} INFO - Job 7: Subtask fetch_data_task
+[2025-04-15T08:26:46.904+0000] {task_command.py:388} INFO - Running <TaskInstance: Anas.fetch_data_task manual__2025-04-15T08:26:45.474532+00:00 [running]> on host 4d6caa4360c9
+[2025-04-15T08:26:46.949+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Anas
+AIRFLOW_CTX_TASK_ID=fetch_data_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-15T08:26:45.474532+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-15T08:26:45.474532+00:00
+[2025-04-15T08:26:47.433+0000] {logging_mixin.py:137} INFO - Table 1 saved to: /opt/***/data/table_1.csv
+[2025-04-15T08:26:47.433+0000] {logging_mixin.py:137} INFO - 
+All 1 tables saved to '/opt/***/data/'!
+[2025-04-15T08:26:47.433+0000] {python.py:177} INFO - Done. Returned value was: /opt/***/data/table_1.csv
+[2025-04-15T08:26:47.450+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=Anas, task_id=fetch_data_task, execution_date=20250415T082645, start_date=20250415T082646, end_date=20250415T082647
+[2025-04-15T08:26:47.477+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-15T08:26:47.500+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

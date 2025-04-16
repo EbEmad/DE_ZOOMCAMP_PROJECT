@@ -1,0 +1,33 @@
+[2025-04-14T15:03:46.683+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.Transform_data manual__2025-04-14T15:03:41.410615+00:00 [queued]>
+[2025-04-14T15:03:46.698+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.Transform_data manual__2025-04-14T15:03:41.410615+00:00 [queued]>
+[2025-04-14T15:03:46.698+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:03:46.698+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-14T15:03:46.698+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:03:46.718+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): Transform_data> on 2025-04-14 15:03:41.410615+00:00
+[2025-04-14T15:03:46.729+0000] {standard_task_runner.py:55} INFO - Started process 293 to run task
+[2025-04-14T15:03:46.734+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'HemaDag', 'Transform_data', 'manual__2025-04-14T15:03:41.410615+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmprqxbm_qa']
+[2025-04-14T15:03:46.736+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask Transform_data
+[2025-04-14T15:03:46.825+0000] {task_command.py:388} INFO - Running <TaskInstance: HemaDag.Transform_data manual__2025-04-14T15:03:41.410615+00:00 [running]> on host 0c4d66587ca1
+[2025-04-14T15:03:46.924+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=HemaDag
+AIRFLOW_CTX_TASK_ID=Transform_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-14T15:03:41.410615+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-14T15:03:41.410615+00:00
+[2025-04-14T15:03:46.925+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-04-14T15:03:46.925+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/scripts/Transform.py']
+[2025-04-14T15:03:46.944+0000] {subprocess.py:86} INFO - Output:
+[2025-04-14T15:03:49.525+0000] {subprocess.py:93} INFO - Table 1 saved to: /opt/***/data/table_1.csv
+[2025-04-14T15:03:49.526+0000] {subprocess.py:93} INFO - 
+[2025-04-14T15:03:49.526+0000] {subprocess.py:93} INFO - All 1 tables saved to '/opt/***/data/'!
+[2025-04-14T15:03:49.526+0000] {subprocess.py:93} INFO - Table 1 saved to: /opt/***/data/table_1.csv
+[2025-04-14T15:03:49.526+0000] {subprocess.py:93} INFO - 
+[2025-04-14T15:03:49.526+0000] {subprocess.py:93} INFO - All 1 tables saved to '/opt/***/data/'!
+[2025-04-14T15:03:49.648+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-14T15:03:49.685+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=HemaDag, task_id=Transform_data, execution_date=20250414T150341, start_date=20250414T150346, end_date=20250414T150349
+[2025-04-14T15:03:49.715+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-14T15:03:49.741+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

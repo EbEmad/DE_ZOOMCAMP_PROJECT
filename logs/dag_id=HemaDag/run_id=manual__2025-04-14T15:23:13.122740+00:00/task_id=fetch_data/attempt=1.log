@@ -1,0 +1,30 @@
+[2025-04-14T15:23:13.850+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.fetch_data manual__2025-04-14T15:23:13.122740+00:00 [queued]>
+[2025-04-14T15:23:13.868+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.fetch_data manual__2025-04-14T15:23:13.122740+00:00 [queued]>
+[2025-04-14T15:23:13.868+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:23:13.868+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-14T15:23:13.869+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:23:13.891+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): fetch_data> on 2025-04-14 15:23:13.122740+00:00
+[2025-04-14T15:23:13.902+0000] {standard_task_runner.py:55} INFO - Started process 751 to run task
+[2025-04-14T15:23:13.907+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'HemaDag', 'fetch_data', 'manual__2025-04-14T15:23:13.122740+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmpfhkl3odo']
+[2025-04-14T15:23:13.909+0000] {standard_task_runner.py:83} INFO - Job 21: Subtask fetch_data
+[2025-04-14T15:23:14.013+0000] {task_command.py:388} INFO - Running <TaskInstance: HemaDag.fetch_data manual__2025-04-14T15:23:13.122740+00:00 [running]> on host 0c4d66587ca1
+[2025-04-14T15:23:14.138+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=HemaDag
+AIRFLOW_CTX_TASK_ID=fetch_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-14T15:23:13.122740+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-14T15:23:13.122740+00:00
+[2025-04-14T15:23:14.139+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-04-14T15:23:14.140+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/scripts/Extract.py']
+[2025-04-14T15:23:14.165+0000] {subprocess.py:86} INFO - Output:
+[2025-04-14T15:23:16.132+0000] {subprocess.py:93} INFO - Table 1 saved to: /opt/***/data/table_1.csv
+[2025-04-14T15:23:16.132+0000] {subprocess.py:93} INFO - 
+[2025-04-14T15:23:16.132+0000] {subprocess.py:93} INFO - All 1 tables saved to '/opt/***/data/'!
+[2025-04-14T15:23:16.233+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-14T15:23:16.282+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=HemaDag, task_id=fetch_data, execution_date=20250414T152313, start_date=20250414T152313, end_date=20250414T152316
+[2025-04-14T15:23:16.329+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-14T15:23:16.366+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

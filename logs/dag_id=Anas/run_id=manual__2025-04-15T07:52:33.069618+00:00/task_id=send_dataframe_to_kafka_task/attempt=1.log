@@ -1,0 +1,47 @@
+[2025-04-15T07:52:38.247+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Anas.send_dataframe_to_kafka_task manual__2025-04-15T07:52:33.069618+00:00 [queued]>
+[2025-04-15T07:52:38.253+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Anas.send_dataframe_to_kafka_task manual__2025-04-15T07:52:33.069618+00:00 [queued]>
+[2025-04-15T07:52:38.253+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-15T07:52:38.253+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-15T07:52:38.253+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-15T07:52:38.261+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): send_dataframe_to_kafka_task> on 2025-04-15 07:52:33.069618+00:00
+[2025-04-15T07:52:38.268+0000] {standard_task_runner.py:55} INFO - Started process 236 to run task
+[2025-04-15T07:52:38.271+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Anas', 'send_dataframe_to_kafka_task', 'manual__2025-04-15T07:52:33.069618+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmpfticm79w']
+[2025-04-15T07:52:38.272+0000] {standard_task_runner.py:83} INFO - Job 4: Subtask send_dataframe_to_kafka_task
+[2025-04-15T07:52:38.311+0000] {task_command.py:388} INFO - Running <TaskInstance: Anas.send_dataframe_to_kafka_task manual__2025-04-15T07:52:33.069618+00:00 [running]> on host ac4c8066c1b3
+[2025-04-15T07:52:38.357+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Anas
+AIRFLOW_CTX_TASK_ID=send_dataframe_to_kafka_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-15T07:52:33.069618+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-15T07:52:33.069618+00:00
+[2025-04-15T07:52:38.359+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-04-15T07:52:38.362+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.7', 9092)]>: Broker version identified as 2.6
+[2025-04-15T07:52:38.362+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-04-15T07:52:38.465+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-04-15T07:52:38.466+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-04-15T07:52:38.466+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-04-15T07:52:38.633+0000] {logging_mixin.py:137} INFO - Success!
+[2025-04-15T07:52:38.733+0000] {cluster.py:315} WARNING - Topic ETL-PROJECT is not available during auto-create initialization
+[2025-04-15T07:52:38.836+0000] {logging_mixin.py:137} INFO - Sent record: Index
+[2025-04-15T07:52:38.837+0000] {logging_mixin.py:137} INFO - Sent record: Country
+[2025-04-15T07:52:38.837+0000] {logging_mixin.py:137} INFO - Sent record: Population
+[2025-04-15T07:52:38.838+0000] {logging_mixin.py:137} INFO - Sent record: YearlyChange
+[2025-04-15T07:52:38.838+0000] {logging_mixin.py:137} INFO - Sent record: NetChange
+[2025-04-15T07:52:38.838+0000] {logging_mixin.py:137} INFO - Sent record: Density
+[2025-04-15T07:52:38.839+0000] {logging_mixin.py:137} INFO - Sent record: Land_Area
+[2025-04-15T07:52:38.839+0000] {logging_mixin.py:137} INFO - Sent record: Migrants
+[2025-04-15T07:52:38.840+0000] {logging_mixin.py:137} INFO - Sent record: Fert_Rate
+[2025-04-15T07:52:38.840+0000] {logging_mixin.py:137} INFO - Sent record: MedianAge
+[2025-04-15T07:52:38.840+0000] {logging_mixin.py:137} INFO - Sent record: UrbanPop
+[2025-04-15T07:52:38.841+0000] {logging_mixin.py:137} INFO - Sent record: WorldShare
+[2025-04-15T07:52:38.845+0000] {logging_mixin.py:137} INFO - All records sent successfully.
+[2025-04-15T07:52:38.845+0000] {kafka.py:511} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2025-04-15T07:52:38.846+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-04-15T07:52:38.846+0000] {logging_mixin.py:137} INFO - Kafka producer closed.
+[2025-04-15T07:52:38.846+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-04-15T07:52:38.854+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=Anas, task_id=send_dataframe_to_kafka_task, execution_date=20250415T075233, start_date=20250415T075238, end_date=20250415T075238
+[2025-04-15T07:52:38.883+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-15T07:52:38.907+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

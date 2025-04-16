@@ -1,0 +1,52 @@
+[2025-04-15T08:19:17.756+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Anas.send_dataframe_to_kafka_task manual__2025-04-15T08:19:12.412887+00:00 [queued]>
+[2025-04-15T08:19:17.761+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: Anas.send_dataframe_to_kafka_task manual__2025-04-15T08:19:12.412887+00:00 [queued]>
+[2025-04-15T08:19:17.761+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-15T08:19:17.762+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-15T08:19:17.762+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-15T08:19:17.770+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): send_dataframe_to_kafka_task> on 2025-04-15 08:19:12.412887+00:00
+[2025-04-15T08:19:17.777+0000] {standard_task_runner.py:55} INFO - Started process 682 to run task
+[2025-04-15T08:19:17.780+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Anas', 'send_dataframe_to_kafka_task', 'manual__2025-04-15T08:19:12.412887+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmpo2y1zrc6']
+[2025-04-15T08:19:17.781+0000] {standard_task_runner.py:83} INFO - Job 39: Subtask send_dataframe_to_kafka_task
+[2025-04-15T08:19:17.824+0000] {task_command.py:388} INFO - Running <TaskInstance: Anas.send_dataframe_to_kafka_task manual__2025-04-15T08:19:12.412887+00:00 [running]> on host ac4c8066c1b3
+[2025-04-15T08:19:17.871+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Anas
+AIRFLOW_CTX_TASK_ID=send_dataframe_to_kafka_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-15T08:19:12.412887+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-15T08:19:12.412887+00:00
+[2025-04-15T08:19:17.886+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-04-15T08:19:17.887+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.7', 9092)]>: Broker version identified as 2.6
+[2025-04-15T08:19:17.887+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-04-15T08:19:17.889+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'FertRate'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/day.py", line 36, in send_df_to_kafka
+    'fert_rate': float(row['FertRate']),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 942, in __getitem__
+    return self._get_value(key)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 1051, in _get_value
+    loc = self.index.get_loc(label)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'FertRate'
+[2025-04-15T08:19:17.897+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=Anas, task_id=send_dataframe_to_kafka_task, execution_date=20250415T081912, start_date=20250415T081917, end_date=20250415T081917
+[2025-04-15T08:19:17.904+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 39 for task send_dataframe_to_kafka_task ('FertRate'; 682)
+[2025-04-15T08:19:17.951+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2025-04-15T08:19:17.969+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

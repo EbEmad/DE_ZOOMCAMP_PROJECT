@@ -1,0 +1,27 @@
+[2025-04-14T15:33:05.717+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.send_to_kafka manual__2025-04-14T15:33:04.123120+00:00 [queued]>
+[2025-04-14T15:33:05.730+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.send_to_kafka manual__2025-04-14T15:33:04.123120+00:00 [queued]>
+[2025-04-14T15:33:05.730+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:33:05.730+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-14T15:33:05.731+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:33:05.749+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): send_to_kafka> on 2025-04-14 15:33:04.123120+00:00
+[2025-04-14T15:33:05.761+0000] {standard_task_runner.py:55} INFO - Started process 999 to run task
+[2025-04-14T15:33:05.766+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'HemaDag', 'send_to_kafka', 'manual__2025-04-14T15:33:04.123120+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmp2me_onas']
+[2025-04-14T15:33:05.768+0000] {standard_task_runner.py:83} INFO - Job 30: Subtask send_to_kafka
+[2025-04-14T15:33:05.860+0000] {task_command.py:388} INFO - Running <TaskInstance: HemaDag.send_to_kafka manual__2025-04-14T15:33:04.123120+00:00 [running]> on host 0c4d66587ca1
+[2025-04-14T15:33:05.967+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=HemaDag
+AIRFLOW_CTX_TASK_ID=send_to_kafka
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-14T15:33:04.123120+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-14T15:33:04.123120+00:00
+[2025-04-14T15:33:05.969+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-04-14T15:33:05.970+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/scripts/kafka_producer.py']
+[2025-04-14T15:33:05.994+0000] {subprocess.py:86} INFO - Output:
+[2025-04-14T15:33:06.885+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-14T15:33:06.927+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=HemaDag, task_id=send_to_kafka, execution_date=20250414T153304, start_date=20250414T153305, end_date=20250414T153306
+[2025-04-14T15:33:06.980+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-14T15:33:07.008+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

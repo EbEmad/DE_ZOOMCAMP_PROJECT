@@ -1,10 +1,9 @@
 import pandas as pd
-from Extract import get_data
 import os
-
+from get_data import fetch_data
 def transform_data():
     # Read the CSV file
-    path=get_data()
+    path=fetch_data()
     df=pd.read_csv(path)
 
     # rename columns into correct format
@@ -51,6 +50,7 @@ def transform_data():
     # save the data
     os.makedirs('/opt/airflow/data/', exist_ok=True)
 
-# Save the DataFrame
-    df.to_csv('/opt/airflow/data/Transformed_data.csv', index=False)
-transform_data()
+    # Save the DataFrame
+    output_path = '/opt/airflow/data/Transformed_data.csv'
+    df.to_csv(output_path, index=False)
+    return output_path

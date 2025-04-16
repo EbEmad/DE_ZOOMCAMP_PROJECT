@@ -1,0 +1,30 @@
+[2025-04-14T15:23:13.867+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.create_table manual__2025-04-14T15:23:13.122740+00:00 [queued]>
+[2025-04-14T15:23:13.883+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: HemaDag.create_table manual__2025-04-14T15:23:13.122740+00:00 [queued]>
+[2025-04-14T15:23:13.883+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:23:13.883+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2025-04-14T15:23:13.884+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-14T15:23:13.909+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): create_table> on 2025-04-14 15:23:13.122740+00:00
+[2025-04-14T15:23:13.921+0000] {standard_task_runner.py:55} INFO - Started process 753 to run task
+[2025-04-14T15:23:13.925+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'HemaDag', 'create_table', 'manual__2025-04-14T15:23:13.122740+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/day.py', '--cfg-path', '/tmp/tmp4ittuaj4']
+[2025-04-14T15:23:13.928+0000] {standard_task_runner.py:83} INFO - Job 23: Subtask create_table
+[2025-04-14T15:23:14.033+0000] {task_command.py:388} INFO - Running <TaskInstance: HemaDag.create_table manual__2025-04-14T15:23:13.122740+00:00 [running]> on host 0c4d66587ca1
+[2025-04-14T15:23:14.161+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=HemaDag
+AIRFLOW_CTX_TASK_ID=create_table
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-14T15:23:13.122740+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-04-14T15:23:13.122740+00:00
+[2025-04-14T15:23:14.162+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-04-14T15:23:14.163+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/scripts/create_table.py']
+[2025-04-14T15:23:14.184+0000] {subprocess.py:86} INFO - Output:
+[2025-04-14T15:23:14.913+0000] {subprocess.py:93} INFO - ✅ Connected to PostgreSQL
+[2025-04-14T15:23:14.914+0000] {subprocess.py:93} INFO - ✅ Table created successfully
+[2025-04-14T15:23:14.914+0000] {subprocess.py:93} INFO - ✅ PostgreSQL connection closed
+[2025-04-14T15:23:14.963+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-14T15:23:15.016+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=HemaDag, task_id=create_table, execution_date=20250414T152313, start_date=20250414T152313, end_date=20250414T152315
+[2025-04-14T15:23:15.062+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2025-04-14T15:23:15.092+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
