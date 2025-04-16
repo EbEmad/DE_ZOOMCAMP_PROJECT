@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY dags/ /opt/airflow/dags/
 
 # Copy the entrypoint script
-COPY entrypoint.sh /entrypoint.sh
+COPY Bashentrypoint.sh /entrypoint.sh
 
 USER root
 RUN chmod +x /entrypoint

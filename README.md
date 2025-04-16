@@ -64,5 +64,3 @@ The project use open data source provided by Worldometers. For simplicity, the p
    ```
    this command will start all services.
 
-
-## After that watch and enjoy 💯
