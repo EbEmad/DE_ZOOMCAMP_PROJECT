@@ -1,0 +1,28 @@
+[2025-07-31T13:24:59.380+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-31T13:24:59.391+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.retrieve_rows_task manual__2025-07-31T13:24:39.484933+00:00 [queued]>
+[2025-07-31T13:24:59.396+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.retrieve_rows_task manual__2025-07-31T13:24:39.484933+00:00 [queued]>
+[2025-07-31T13:24:59.397+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-07-31T13:24:59.404+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): retrieve_rows_task> on 2025-07-31 13:24:39.484933+00:00
+[2025-07-31T13:24:59.413+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'world_population_ETL_dag_43', 'retrieve_rows_task', 'manual__2025-07-31T13:24:39.484933+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/project_01_dag.py', '--cfg-path', '/tmp/tmp2x6zr20z']
+[2025-07-31T13:24:59.415+0000] {standard_task_runner.py:105} INFO - Job 31: Subtask retrieve_rows_task
+[2025-07-31T13:24:59.415+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=643) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-31T13:24:59.416+0000] {standard_task_runner.py:72} INFO - Started process 645 to run task
+[2025-07-31T13:24:59.444+0000] {task_command.py:467} INFO - Running <TaskInstance: world_population_ETL_dag_43.retrieve_rows_task manual__2025-07-31T13:24:39.484933+00:00 [running]> on host 5caea9b1d396
+[2025-07-31T13:24:59.499+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='givi-abe' AIRFLOW_CTX_DAG_ID='world_population_ETL_dag_43' AIRFLOW_CTX_TASK_ID='retrieve_rows_task' AIRFLOW_CTX_EXECUTION_DATE='2025-07-31T13:24:39.484933+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-31T13:24:39.484933+00:00'
+[2025-07-31T13:24:59.500+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-31T13:24:59.514+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 592204), 1)
+[2025-07-31T13:24:59.514+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 604232), 2)
+[2025-07-31T13:24:59.514+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 607273), 3)
+[2025-07-31T13:24:59.514+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 609682), 4)
+[2025-07-31T13:24:59.514+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 613042), 5)
+[2025-07-31T13:24:59.514+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 615455), 6)
+[2025-07-31T13:24:59.514+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 617633), 7)
+[2025-07-31T13:24:59.515+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 620184), 8)
+[2025-07-31T13:24:59.515+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 623871), 9)
+[2025-07-31T13:24:59.515+0000] {logging_mixin.py:190} INFO - (None, None, None, None, None, None, None, None, None, None, None, None, datetime.datetime(2025, 7, 31, 13, 21, 22, 627511), 10)
+[2025-07-31T13:24:59.515+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-31T13:24:59.521+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-31T13:24:59.521+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=world_population_ETL_dag_43, task_id=retrieve_rows_task, run_id=manual__2025-07-31T13:24:39.484933+00:00, execution_date=20250731T132439, start_date=20250731T132459, end_date=20250731T132459
+[2025-07-31T13:24:59.549+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-31T13:24:59.562+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-31T13:24:59.563+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

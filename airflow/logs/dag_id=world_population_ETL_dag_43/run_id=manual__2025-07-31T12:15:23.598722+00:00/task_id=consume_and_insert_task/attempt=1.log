@@ -1,0 +1,44 @@
+[2025-07-31T12:15:32.833+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-31T12:15:32.851+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.consume_and_insert_task manual__2025-07-31T12:15:23.598722+00:00 [queued]>
+[2025-07-31T12:15:32.859+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.consume_and_insert_task manual__2025-07-31T12:15:23.598722+00:00 [queued]>
+[2025-07-31T12:15:32.859+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-07-31T12:15:32.868+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): consume_and_insert_task> on 2025-07-31 12:15:23.598722+00:00
+[2025-07-31T12:15:32.880+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'world_population_ETL_dag_43', 'consume_and_insert_task', 'manual__2025-07-31T12:15:23.598722+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/project_01_dag.py', '--cfg-path', '/tmp/tmpwfbdk0tt']
+[2025-07-31T12:15:32.882+0000] {standard_task_runner.py:105} INFO - Job 21: Subtask consume_and_insert_task
+[2025-07-31T12:15:32.882+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=387) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-31T12:15:32.883+0000] {standard_task_runner.py:72} INFO - Started process 389 to run task
+[2025-07-31T12:15:32.917+0000] {task_command.py:467} INFO - Running <TaskInstance: world_population_ETL_dag_43.consume_and_insert_task manual__2025-07-31T12:15:23.598722+00:00 [running]> on host 1e069286f646
+[2025-07-31T12:15:32.977+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='givi-abe' AIRFLOW_CTX_DAG_ID='world_population_ETL_dag_43' AIRFLOW_CTX_TASK_ID='consume_and_insert_task' AIRFLOW_CTX_EXECUTION_DATE='2025-07-31T12:15:23.598722+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-31T12:15:23.598722+00:00'
+[2025-07-31T12:15:32.978+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-31T12:15:32.988+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T12:15:32.990+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.7', 9092)]>: Broker version identified as 2.6
+[2025-07-31T12:15:32.991+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T12:15:32.991+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('ETL-PROJECT',)
+[2025-07-31T12:15:32.994+0000] {logging_mixin.py:190} INFO - ✅ Connected to PostgreSQL
+[2025-07-31T12:15:32.996+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T12:15:32.997+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T12:15:32.997+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T12:15:33.098+0000] {cluster.py:401} INFO - Coordinator for group/my-group is ('coordinator-1', 'kafka', 9092, None)
+[2025-07-31T12:15:33.099+0000] {base.py:788} INFO - Discovered coordinator coordinator-1 for group my-group
+[2025-07-31T12:15:33.099+0000] {base.py:848} INFO - Starting new heartbeat thread
+[2025-07-31T12:15:33.099+0000] {consumer.py:365} INFO - Revoking previously assigned partitions () for group my-group
+[2025-07-31T12:15:33.100+0000] {base.py:419} INFO - Failed to join group my-group: NodeNotReadyError: coordinator-1
+[2025-07-31T12:15:33.100+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T12:15:33.100+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T12:15:33.201+0000] {base.py:532} INFO - (Re-)joining group my-group
+[2025-07-31T12:15:33.203+0000] {base.py:637} INFO - Received member id kafka-python-2.2.15-24037f06-3b14-4683-a92d-7a34206a1023 for group my-group; will retry join-group
+[2025-07-31T12:15:33.203+0000] {base.py:419} INFO - Failed to join group my-group: [Error 79] MemberIdRequiredError
+[2025-07-31T12:15:33.203+0000] {base.py:532} INFO - (Re-)joining group my-group
+[2025-07-31T12:15:33.995+0000] {base.py:1052} INFO - Stopping heartbeat thread
+[2025-07-31T12:15:33.996+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T12:15:33.996+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T12:15:33.997+0000] {base.py:569} ERROR - Error sending JoinGroupRequest_v4 to node coordinator-1 [Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>]
+[2025-07-31T12:15:33.997+0000] {base.py:810} WARNING - Marking the coordinator dead (node coordinator-1) for group my-group: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>.
+[2025-07-31T12:15:33.997+0000] {base.py:419} INFO - Failed to join group my-group: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>
+[2025-07-31T12:15:33.997+0000] {logging_mixin.py:190} INFO - 🔌 PostgreSQL connection closed.
+[2025-07-31T12:15:33.997+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-31T12:15:34.004+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-31T12:15:34.005+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=world_population_ETL_dag_43, task_id=consume_and_insert_task, run_id=manual__2025-07-31T12:15:23.598722+00:00, execution_date=20250731T121523, start_date=20250731T121532, end_date=20250731T121534
+[2025-07-31T12:15:34.059+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-31T12:15:34.079+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-31T12:15:34.080+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

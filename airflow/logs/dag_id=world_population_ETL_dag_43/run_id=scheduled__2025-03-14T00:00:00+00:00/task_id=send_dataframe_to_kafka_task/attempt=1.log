@@ -1,0 +1,29 @@
+[2025-07-31T11:50:17.425+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-31T11:50:17.457+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.send_dataframe_to_kafka_task scheduled__2025-03-14T00:00:00+00:00 [queued]>
+[2025-07-31T11:50:17.478+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.send_dataframe_to_kafka_task scheduled__2025-03-14T00:00:00+00:00 [queued]>
+[2025-07-31T11:50:17.479+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-07-31T11:50:17.502+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): send_dataframe_to_kafka_task> on 2025-03-14 00:00:00+00:00
+[2025-07-31T11:50:17.521+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=338) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-31T11:50:17.523+0000] {standard_task_runner.py:72} INFO - Started process 376 to run task
+[2025-07-31T11:50:17.522+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'world_population_ETL_dag_43', 'send_dataframe_to_kafka_task', 'scheduled__2025-03-14T00:00:00+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/project_01_dag.py', '--cfg-path', '/tmp/tmpsfqjakw3']
+[2025-07-31T11:50:17.525+0000] {standard_task_runner.py:105} INFO - Job 42: Subtask send_dataframe_to_kafka_task
+[2025-07-31T11:50:17.586+0000] {task_command.py:467} INFO - Running <TaskInstance: world_population_ETL_dag_43.send_dataframe_to_kafka_task scheduled__2025-03-14T00:00:00+00:00 [running]> on host 4c2d4060a2fe
+[2025-07-31T11:50:17.711+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='givi-abe' AIRFLOW_CTX_DAG_ID='world_population_ETL_dag_43' AIRFLOW_CTX_TASK_ID='send_dataframe_to_kafka_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-14T00:00:00+00:00'
+[2025-07-31T11:50:17.713+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-31T11:50:17.734+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T11:50:17.742+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.7', 9092)]>: Broker version identified as 2.6
+[2025-07-31T11:50:17.742+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T11:50:17.851+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T11:50:17.852+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T11:50:17.852+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T11:50:17.860+0000] {cluster.py:313} WARNING - Topic ETL-PROJECT is not available during auto-create initialization
+[2025-07-31T11:50:17.966+0000] {cluster.py:313} WARNING - Topic ETL-PROJECT is not available during auto-create initialization
+[2025-07-31T11:50:18.122+0000] {logging_mixin.py:190} INFO - Successfully sent 233 records to Kafka topic: ETL-PROJECT
+[2025-07-31T11:50:18.122+0000] {kafka.py:629} INFO - <KafkaProducer client_id=kafka-python-producer-1 transactional_id=None>: Closing the Kafka producer with 9223372036.0 secs timeout.
+[2025-07-31T11:50:18.123+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T11:50:18.124+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-31T11:50:18.140+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-31T11:50:18.140+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=world_population_ETL_dag_43, task_id=send_dataframe_to_kafka_task, run_id=scheduled__2025-03-14T00:00:00+00:00, execution_date=20250314T000000, start_date=20250731T115017, end_date=20250731T115018
+[2025-07-31T11:50:18.228+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-31T11:50:18.278+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-31T11:50:18.281+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
