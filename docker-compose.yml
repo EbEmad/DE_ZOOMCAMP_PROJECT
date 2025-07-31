@@ -16,8 +16,8 @@ services:
 
   kafka:
     build:
-      context: .
-      dockerfile: ./kafka/Dockerfile
+      context: ./kafka
+      dockerfile: Dockerfile
     image: my-kafka-custom
     container_name: kafka
     ports:
@@ -76,7 +76,9 @@ services:
       - realtime
 
   webserver:
-    build: .
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -98,7 +100,9 @@ services:
       - realtime
 
   scheduler:
-    build: .
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
