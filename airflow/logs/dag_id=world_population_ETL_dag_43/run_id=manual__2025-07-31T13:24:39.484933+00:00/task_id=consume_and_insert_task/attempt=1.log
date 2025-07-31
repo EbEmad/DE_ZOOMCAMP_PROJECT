@@ -1,0 +1,47 @@
+[2025-07-31T13:24:46.489+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-31T13:24:46.502+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.consume_and_insert_task manual__2025-07-31T13:24:39.484933+00:00 [queued]>
+[2025-07-31T13:24:46.508+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.consume_and_insert_task manual__2025-07-31T13:24:39.484933+00:00 [queued]>
+[2025-07-31T13:24:46.508+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-07-31T13:24:46.517+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): consume_and_insert_task> on 2025-07-31 13:24:39.484933+00:00
+[2025-07-31T13:24:46.528+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'world_population_ETL_dag_43', 'consume_and_insert_task', 'manual__2025-07-31T13:24:39.484933+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/project_01_dag.py', '--cfg-path', '/tmp/tmpni1d6sfw']
+[2025-07-31T13:24:46.530+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask consume_and_insert_task
+[2025-07-31T13:24:46.530+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=628) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-31T13:24:46.530+0000] {standard_task_runner.py:72} INFO - Started process 630 to run task
+[2025-07-31T13:24:46.563+0000] {task_command.py:467} INFO - Running <TaskInstance: world_population_ETL_dag_43.consume_and_insert_task manual__2025-07-31T13:24:39.484933+00:00 [running]> on host 5caea9b1d396
+[2025-07-31T13:24:46.637+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='givi-abe' AIRFLOW_CTX_DAG_ID='world_population_ETL_dag_43' AIRFLOW_CTX_TASK_ID='consume_and_insert_task' AIRFLOW_CTX_EXECUTION_DATE='2025-07-31T13:24:39.484933+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-31T13:24:39.484933+00:00'
+[2025-07-31T13:24:46.638+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-31T13:24:46.649+0000] {conn.py:396} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T13:24:46.651+0000] {conn.py:618} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.7', 9092)]>: Broker version identified as 2.6
+[2025-07-31T13:24:46.652+0000] {conn.py:457} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T13:24:46.653+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('ETL-PROJECT',)
+[2025-07-31T13:24:46.653+0000] {logging_mixin.py:190} INFO - 📡 Kafka consumer started. Waiting for partition assignment...
+[2025-07-31T13:24:46.654+0000] {conn.py:396} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T13:24:46.654+0000] {conn.py:457} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T13:24:46.655+0000] {conn.py:945} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T13:24:46.756+0000] {cluster.py:401} INFO - Coordinator for group/etl-consumer-group is ('coordinator-1', 'kafka', 9092, None)
+[2025-07-31T13:24:46.756+0000] {base.py:788} INFO - Discovered coordinator coordinator-1 for group etl-consumer-group
+[2025-07-31T13:24:46.756+0000] {base.py:848} INFO - Starting new heartbeat thread
+[2025-07-31T13:24:46.757+0000] {consumer.py:365} INFO - Revoking previously assigned partitions () for group etl-consumer-group
+[2025-07-31T13:24:46.757+0000] {base.py:419} INFO - Failed to join group etl-consumer-group: NodeNotReadyError: coordinator-1
+[2025-07-31T13:24:46.758+0000] {conn.py:396} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.7', 9092)]>: connecting to kafka:9092 [('172.18.0.7', 9092) IPv4]
+[2025-07-31T13:24:46.758+0000] {conn.py:457} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Connection complete.
+[2025-07-31T13:24:46.859+0000] {base.py:532} INFO - (Re-)joining group etl-consumer-group
+[2025-07-31T13:24:46.861+0000] {base.py:637} INFO - Received member id etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91-bccfd587-f32b-49e3-b5a3-2644b2e814cf for group etl-consumer-group; will retry join-group
+[2025-07-31T13:24:46.861+0000] {base.py:419} INFO - Failed to join group etl-consumer-group: [Error 79] MemberIdRequiredError
+[2025-07-31T13:24:46.862+0000] {base.py:532} INFO - (Re-)joining group etl-consumer-group
+[2025-07-31T13:24:53.641+0000] {base.py:594} INFO - Successfully joined group etl-consumer-group <Generation 4 (member_id: etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91-bccfd587-f32b-49e3-b5a3-2644b2e814cf, protocol: range)>
+[2025-07-31T13:24:53.643+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-07-31T13:24:53.643+0000] {consumer.py:249} INFO - Setting newly assigned partitions () for group etl-consumer-group
+[2025-07-31T13:24:56.654+0000] {logging_mixin.py:190} INFO - ⚠️ No partitions assigned after 10 seconds
+[2025-07-31T13:24:56.655+0000] {base.py:1052} INFO - Stopping heartbeat thread
+[2025-07-31T13:24:56.655+0000] {base.py:891} INFO - Leaving consumer group (etl-consumer-group).
+[2025-07-31T13:24:56.656+0000] {base.py:906} INFO - LeaveGroup request for group etl-consumer-group returned successfully
+[2025-07-31T13:24:56.657+0000] {conn.py:945} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T13:24:56.657+0000] {conn.py:945} INFO - <BrokerConnection client_id=etl-consumer-client-46de2773-1e46-4c6c-872e-28621e104e91, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.18.0.7', 9092)]>: Closing connection. 
+[2025-07-31T13:24:56.657+0000] {logging_mixin.py:190} INFO - 🔌 Resources cleaned up
+[2025-07-31T13:24:56.658+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-31T13:24:56.666+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-31T13:24:56.667+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=world_population_ETL_dag_43, task_id=consume_and_insert_task, run_id=manual__2025-07-31T13:24:39.484933+00:00, execution_date=20250731T132439, start_date=20250731T132446, end_date=20250731T132456
+[2025-07-31T13:24:56.685+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-31T13:24:56.700+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-31T13:24:56.701+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

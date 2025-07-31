@@ -1,0 +1,35 @@
+[2025-07-31T11:57:54.723+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-31T11:57:54.735+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.process_data_task manual__2025-07-31T11:57:51.348289+00:00 [queued]>
+[2025-07-31T11:57:54.740+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.process_data_task manual__2025-07-31T11:57:51.348289+00:00 [queued]>
+[2025-07-31T11:57:54.740+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-07-31T11:57:54.747+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_data_task> on 2025-07-31 11:57:51.348289+00:00
+[2025-07-31T11:57:54.757+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'world_population_ETL_dag_43', 'process_data_task', 'manual__2025-07-31T11:57:51.348289+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/project_01_dag.py', '--cfg-path', '/tmp/tmpiscu86pj']
+[2025-07-31T11:57:54.759+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=196) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-31T11:57:54.759+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask process_data_task
+[2025-07-31T11:57:54.760+0000] {standard_task_runner.py:72} INFO - Started process 198 to run task
+[2025-07-31T11:57:54.789+0000] {task_command.py:467} INFO - Running <TaskInstance: world_population_ETL_dag_43.process_data_task manual__2025-07-31T11:57:51.348289+00:00 [running]> on host 8c0b7e74a2c2
+[2025-07-31T11:57:54.884+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='givi-abe' AIRFLOW_CTX_DAG_ID='world_population_ETL_dag_43' AIRFLOW_CTX_TASK_ID='process_data_task' AIRFLOW_CTX_EXECUTION_DATE='2025-07-31T11:57:51.348289+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-31T11:57:51.348289+00:00'
+[2025-07-31T11:57:54.885+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-31T11:57:55.476+0000] {logging_mixin.py:190} INFO - Connection to the website established.
+[2025-07-31T11:57:55.489+0000] {logging_mixin.py:190} INFO - Lists are clear!
+[2025-07-31T11:57:55.489+0000] {logging_mixin.py:190} INFO - Lists are full of data!
+[2025-07-31T11:57:55.491+0000] {logging_mixin.py:190} INFO - Data processing complete.
+[2025-07-31T11:57:55.491+0000] {python.py:240} INFO - Done. Returned value was:                 COUNTRY  ...                    INS_DATE
+0                India   ...  2025-07-31 11:57:55.483690
+1                China   ...  2025-07-31 11:57:55.483735
+2        United States   ...  2025-07-31 11:57:55.483762
+3            Indonesia   ...  2025-07-31 11:57:55.483788
+4             Pakistan   ...  2025-07-31 11:57:55.483813
+..                  ...  ...                         ...
+228         Montserrat   ...  2025-07-31 11:57:55.488879
+229   Falkland Islands   ...  2025-07-31 11:57:55.488902
+230            Tokelau   ...  2025-07-31 11:57:55.488923
+231               Niue   ...  2025-07-31 11:57:55.488943
+232           Holy See   ...  2025-07-31 11:57:55.488975
+
+[233 rows x 12 columns]
+[2025-07-31T11:57:55.555+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-31T11:57:55.556+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=world_population_ETL_dag_43, task_id=process_data_task, run_id=manual__2025-07-31T11:57:51.348289+00:00, execution_date=20250731T115751, start_date=20250731T115754, end_date=20250731T115755
+[2025-07-31T11:57:55.614+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-31T11:57:55.636+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-31T11:57:55.637+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

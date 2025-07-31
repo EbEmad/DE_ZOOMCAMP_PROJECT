@@ -1,61 +1,4 @@
-version: '3'
 services:
-  postgres:
-    image: postgres:13
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
-    ports:
-      - "5432:5432"
-    restart: always
-
-  webserver:
-    build: .
-    restart: always
-    environment:
-      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
-      - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
-      - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./scripts:/opt/airflow/scripts
-      - ./data:/opt/airflow/data       
-
-    ports:
-      - "8080:8080"
-    entrypoint: /entrypoint.sh
-    command: webserver
-
-  scheduler:
-    build: .
-    restart: always
-    environment:
-      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
-      - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
-      - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./scripts:/opt/airflow/scripts
-      - ./data:/opt/airflow/data       
-
-    entrypoint: /entrypoint.sh
-    command: scheduler
-  terraform:
-    build:
-      context: .
-      dockerfile: dockerfile.terraform
-    image: ubuntu:latest
-    container_name: terraform
-    volumes:
-      - ./terraform:/terraform
-      - ./data:/terraform/data
-    working_dir: /terraform
-  
   zookeeper:
     image: bitnami/zookeeper:latest
     container_name: zookeeper
@@ -68,30 +11,111 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - realtime
+
   kafka:
     build:
       context: .
-      dockerfile: dockerfile.kafka
+      dockerfile: ./kafka/Dockerfile
     image: my-kafka-custom
     container_name: kafka
     ports:
       - "9092:9092"
+      - "29092:29092"
     environment:
       - KAFKA_CFG_BROKER_ID=1
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT
-      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,EXTERNAL://:29092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
+      - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+      - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=false
+      - KAFKA_CFG_NUM_PARTITIONS=1
+      - KAFKA_CFG_DEFAULT_REPLICATION_FACTOR=1
       - ALLOW_PLAINTEXT_LISTENER=yes
     healthcheck:
-      test: ["CMD-SHELL", "/opt/bitnami/kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092"]
+      test: ["CMD-SHELL", "/opt/bitnami/kafka/bin/kafka-topics.sh --list --bootstrap-server kafka:9092 || exit 1"]
       interval: 10s
-      timeout: 5s
+      timeout: 10s
       retries: 5
-      start_period: 20s
+      start_period: 30s
     volumes:
       - ./create-topics.sh:/create-topics.sh
     entrypoint: ["/opt/bitnami/scripts/kafka/entrypoint.sh"]
-    command: ["/bin/bash", "-c", "/opt/bitnami/scripts/kafka/run.sh & sleep 30 && /create-topics.sh && wait"]
+    command: ["/bin/bash", "-c", "/opt/bitnami/scripts/kafka/run.sh && sleep 15 && /create-topics.sh"]
     depends_on:
-      - zookeeper
+      zookeeper:
+        condition: service_healthy
+    networks:
+      - realtime
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+    networks:
+      - realtime
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    networks:
+      - realtime
+
+  webserver:
+    build: .
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
+      - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=test
+      - KAFKA_TOPIC=ETL-PROJECT
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./Data:/opt/airflow/data
+    ports:
+      - "8080:8080"
+    entrypoint: /run.sh
+    command: webserver
+    networks:
+      - realtime
+
+  scheduler:
+    build: .
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
+      - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=test
+      - KAFKA_TOPIC=ETL-PROJECT
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./Data:/opt/airflow/data
+    entrypoint: /run.sh
+    command: scheduler
+    networks:
+      - realtime
+networks:
+  realtime:
+    driver: bridge
