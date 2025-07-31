@@ -4,7 +4,7 @@ USER root
 
 RUN groupadd docker && usermod -aG docker airflow
 
-COPY requirements.txt /requirements.txt
+COPY ../requirements.txt /requirements.txt
 COPY Airflow.sh /run.sh
 RUN chmod +x /run.sh
 
