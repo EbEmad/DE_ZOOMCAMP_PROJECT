@@ -5,7 +5,8 @@ load_dotenv()
 
 def check_table():
     try:
-        conn_string = f'postgresql+psycopg2://root:root@db:5432/test'       
+        conn_string = f'postgresql+psycopg2://root:root@db:5432/test'
+      
         engine = create_engine(conn_string)
 
         with engine.connect() as conn:

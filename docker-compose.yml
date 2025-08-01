@@ -41,9 +41,14 @@ services:
       retries: 5
       start_period: 30s
     volumes:
-      - ./create-topics.sh:/create-topics.sh
-    entrypoint: ["/opt/bitnami/scripts/kafka/entrypoint.sh"]
-    command: ["/bin/bash", "-c", "/opt/bitnami/scripts/kafka/run.sh && sleep 15 && /create-topics.sh"]
+      - ./kafka/create-topics.sh:/create-topics.sh
+    entrypoint: ["/bin/bash", "-c"]
+    command: >
+      "/opt/bitnami/scripts/kafka/run.sh & 
+      sleep 10; 
+      /create-topics.sh; 
+      wait"
+
     depends_on:
       zookeeper:
         condition: service_healthy

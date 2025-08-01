@@ -6,6 +6,7 @@ from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 load_dotenv()
 
+
 def retrieve_rows():
     try:
         conn_string = f'postgresql+psycopg2://root:root@db:5432/test'

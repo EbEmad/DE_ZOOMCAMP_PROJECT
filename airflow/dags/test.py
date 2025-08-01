@@ -3,24 +3,17 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash import BashOperator
 from airflow.providers.docker.operators.docker import DockerOperator
 from datetime import datetime, timedelta, date
-import pandas as pd
-import requests
-from bs4 import BeautifulSoup
-from sqlalchemy import create_engine, text
-import json
-from kafka import KafkaProducer, KafkaConsumer
-import psycopg2
-import pyarrow as pa
-import os
-import docker
-from dotenv import load_dotenv
-import uuid
-import os
-import json
-import uuid
-import psycopg2
-from kafka import KafkaConsumer
-load_dotenv()
+import sys
+sys.path.append('/opt/airflow/scripts')
+from Check_table import check_table
+from consume_insert import consume_and_insert
+from Create_table import create_table
+from get_data import fetch_data
+from get_file import get_csv_file
+from  kafka_producer import send_df_to_kafka
+from  Retrive_Rows import retrieve_rows
+from  Transform import transform_data
+
 
 
 # Define the default arguments for the DAG
@@ -38,55 +31,55 @@ default_args = {
 
 
 # Define the DAG
-with DAG('world_population_ETL_dag_43',
+with DAG('test',
          default_args=default_args,
          description='A DAG to fetch and store world population data',
          schedule_interval='@daily',
          catchup=True) as dag:
 
     # Define the tasks
-    fetch_data_task = BashOperator(
+    fetch_data_task = PythonOperator(
         task_id='fetch_data_task',
-        bash_command='cd /opt/airflow/scripts && python get_data.py'
+        python_callable= fetch_data
     )
 
-    process_data_task = BashOperator(
+    process_data_task = PythonOperator(
         task_id='process_data_task',
-        bash_command='cd /opt/airflow/scripts && python Transform.py',
+        python_callable= transform_data,
         op_args=[],
         op_kwargs={'doc': "{{ task_instance.xcom_pull(task_ids='fetch_data_task') }}"},
         provide_context=True,
     )
 
-    send_dataframe_to_kafka_task = BashOperator(
+    send_dataframe_to_kafka_task = PythonOperator(
         task_id = 'send_dataframe_to_kafka_task',
-        bash_command='cd /opt/airflow/scripts && python kafka_producer.py',
+        python_callable= send_df_to_kafka,
         provide_context=True,
     )
 
-    create_table_task = BashOperator(
+    create_table_task = PythonOperator(
         task_id='create_table_task',
-        bash_command='cd /opt/airflow/scripts && python Create_table.py',
+        python_callable=create_table,
         provide_context=True,
     )
 
-    consume_and_insert_task = BashOperator(
+    consume_and_insert_task = PythonOperator(
         task_id='consume_and_insert_task',
-        bash_command='cd /opt/airflow/scripts && python consume_insert.py'
+        python_callable= consume_and_insert
     )
 
-    check_table_task = BashOperator(
+    check_table_task = PythonOperator(
         task_id='check_table_task',
-        bash_command='cd /opt/airflow/scripts && python Check_table.py'
+        python_callable= check_table
     )
 
-    retrieve_rows_task = BashOperator(
+    retrieve_rows_task = PythonOperator(
         task_id='retrieve_rows_task',
-        bash_command='cd /opt/airflow/scripts && python Retrive_Rows.py'
+        python_callable= retrieve_rows
     )
-    get_csv_file_task = BashOperator(
+    get_csv_file_task = PythonOperator(
         task_id='get_csv_file_task',
-        bash_command='cd /opt/airflow/scripts && python get_file.py'
+        python_callable=get_csv_file
     )
 
   
