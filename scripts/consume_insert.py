@@ -21,7 +21,7 @@ def consume_and_insert():
             database=os.getenv("POSTGRES_DB"),
             user=os.getenv("POSTGRES_USER"),
             password=os.getenv("POSTGRES_PASSWORD"),
-            host="postgres",
+            host="db",
             port="5432"
         )
         cursor = conn.cursor()

@@ -6,10 +6,10 @@ def create_table():
         # connect to postgres
         conn=psycopg2.connect(
 
-            database="airflow",
-            user="airflow",
-            password="airflow",
-            host="postgres",
+            database="test",
+            user="root",
+            password="root",
+            host="db",
             port="5432"
         )
         cursor = conn.cursor()

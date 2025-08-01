@@ -8,7 +8,7 @@ load_dotenv()
 
 def retrieve_rows():
     try:
-        conn_string = f'postgresql+psycopg2://{os.getenv("POSTGRES_USER")}:{os.getenv("POSTGRES_PASSWORD")}@project_01-postgres-1:5432/{os.getenv("POSTGRES_DB")}'
+        conn_string = f'postgresql+psycopg2://root:root@db:5432/test'
         engine = create_engine(conn_string)
         with engine.connect() as conn:
             # Create a SQLAlchemy text object for your query
