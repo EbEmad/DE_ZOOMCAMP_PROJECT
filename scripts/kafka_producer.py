@@ -2,31 +2,30 @@ from kafka import KafkaProducer
 import json
 
 def send_df_to_kafka(**kwargs):
-    producer=None
+    producer = None
     try:
-        # initialize the Kafka producer
-        producer=KafkaProducer(
-            bootstrap_servers=['localhost:9092'],
+        # Initialize Kafka producer
+        producer = KafkaProducer(
+            bootstrap_servers=['kafka:9092'],
             value_serializer=lambda x: json.dumps(x, default=str).encode('utf-8')
         )
-        df = kwargs['ti'].xcom_pull(task_ids='Transform_data')
 
-        # convert DataFrame to dictionary records
-        df=df.to_dict(orient='records')
+        df = kwargs['ti'].xcom_pull(task_ids='process_data_task')
 
-        # send each record to Kafka topic
-        for record in df:
-            producer.send('ETL-PROJECT', value=record)
-            print(f"Sent record: {record}")
+        # Convert DataFrame to dictionary records
+        records = df.to_dict(orient='records')
         
-
-        # ensure all messages are sent 
+        # Send each record to Kafka
+        for record in records:
+            producer.send('ETL-PROJECT', value=record)
+        
+        # Ensure all messages are sent
         producer.flush()
-        print("All records sent successfully.")
+        print(f"Successfully sent {len(records)} records to Kafka topic: ETL-PROJECT")
+        
     except Exception as e:
-        print(f"Error sending records to Kafka: {e}")
+        print(f"Error sending data to Kafka: {str(e)}")
         raise
     finally:
         if producer:
             producer.close()
-            print("Kafka producer closed.")

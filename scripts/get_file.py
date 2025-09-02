@@ -6,7 +6,6 @@ import os
 load_dotenv()
 
 
-
 def get_csv_file(**kwargs):
     try:
         # Retrieve data from XCom

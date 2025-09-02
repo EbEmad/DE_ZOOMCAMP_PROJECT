@@ -16,7 +16,7 @@ services:
 
   kafka:
     build:
-      context: ./kafka
+      context: ./services/kafka
       dockerfile: Dockerfile
     image: my-kafka-custom
     container_name: kafka
@@ -41,9 +41,14 @@ services:
       retries: 5
       start_period: 30s
     volumes:
-      - ./create-topics.sh:/create-topics.sh
-    entrypoint: ["/opt/bitnami/scripts/kafka/entrypoint.sh"]
-    command: ["/bin/bash", "-c", "/opt/bitnami/scripts/kafka/run.sh && sleep 15 && /create-topics.sh"]
+      - ./kafka/create-topics.sh:/create-topics.sh
+    entrypoint: ["/bin/bash", "-c"]
+    command: >
+      "/opt/bitnami/scripts/kafka/run.sh & 
+      sleep 10; 
+      /create-topics.sh; 
+      wait"
+
     depends_on:
       zookeeper:
         condition: service_healthy
@@ -77,7 +82,7 @@ services:
 
   webserver:
     build:
-      context: ./airflow
+      context: ./services/airflow
       dockerfile: Dockerfile
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
@@ -92,6 +97,7 @@ services:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
       - ./Data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
     ports:
       - "8080:8080"
     entrypoint: /run.sh
@@ -101,7 +107,7 @@ services:
 
   scheduler:
     build:
-      context: ./airflow
+      context: ./services/airflow
       dockerfile: Dockerfile
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
@@ -116,10 +122,22 @@ services:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
       - ./Data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
     entrypoint: /run.sh
     command: scheduler
     networks:
       - realtime
+  
+  terraform:
+    build:
+      context: ./services/terraform
+      dockerfile: Dockerfile
+    image: ubuntu:latest
+    container_name: terraform
+    volumes:
+      - ./services/terraform:/terraform
+      - ./data:/terraform/data
+    working_dir: /terraform
 networks:
   realtime:
     driver: bridge

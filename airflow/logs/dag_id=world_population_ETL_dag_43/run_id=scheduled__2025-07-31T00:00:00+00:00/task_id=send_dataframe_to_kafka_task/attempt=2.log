@@ -1,0 +1,144 @@
+[2025-08-01T11:35:47.057+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-08-01T11:35:47.072+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.send_dataframe_to_kafka_task scheduled__2025-07-31T00:00:00+00:00 [queued]>
+[2025-08-01T11:35:47.078+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: world_population_ETL_dag_43.send_dataframe_to_kafka_task scheduled__2025-07-31T00:00:00+00:00 [queued]>
+[2025-08-01T11:35:47.078+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2025-08-01T11:35:47.088+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): send_dataframe_to_kafka_task> on 2025-07-31 00:00:00+00:00
+[2025-08-01T11:35:47.099+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'world_population_ETL_dag_43', 'send_dataframe_to_kafka_task', 'scheduled__2025-07-31T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/project_01_dag.py', '--cfg-path', '/tmp/tmpra2nkzc0']
+[2025-08-01T11:35:47.101+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=189) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-01T11:35:47.102+0000] {standard_task_runner.py:105} INFO - Job 17: Subtask send_dataframe_to_kafka_task
+[2025-08-01T11:35:47.102+0000] {standard_task_runner.py:72} INFO - Started process 206 to run task
+[2025-08-01T11:35:47.137+0000] {task_command.py:467} INFO - Running <TaskInstance: world_population_ETL_dag_43.send_dataframe_to_kafka_task scheduled__2025-07-31T00:00:00+00:00 [running]> on host 3a7d040e403d
+[2025-08-01T11:35:47.195+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='givi-abe' AIRFLOW_CTX_DAG_ID='world_population_ETL_dag_43' AIRFLOW_CTX_TASK_ID='send_dataframe_to_kafka_task' AIRFLOW_CTX_EXECUTION_DATE='2025-07-31T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-31T00:00:00+00:00'
+[2025-08-01T11:35:47.196+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-08-01T11:35:47.214+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-08-01T11:35:47.214+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-08-01T11:35:47.214+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-08-01T11:35:47.214+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.05 secs
+[2025-08-01T11:35:47.270+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-08-01T11:35:47.270+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-08-01T11:35:47.270+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-08-01T11:35:47.271+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.08 secs
+[2025-08-01T11:35:47.353+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-08-01T11:35:47.353+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-08-01T11:35:47.354+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-08-01T11:35:47.354+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.17 secs
+[2025-08-01T11:35:47.527+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-08-01T11:35:47.527+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-08-01T11:35:47.527+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-08-01T11:35:47.528+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.40 secs
+[2025-08-01T11:35:47.932+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-08-01T11:35:47.933+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-08-01T11:35:47.933+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-08-01T11:35:47.933+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.95 secs
+[2025-08-01T11:35:48.886+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-08-01T11:35:48.886+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-08-01T11:35:48.887+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-08-01T11:35:48.887+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.32 secs
+[2025-08-01T11:35:49.212+0000] {logging_mixin.py:190} INFO - Error sending data to Kafka: NoBrokersAvailable
+[2025-08-01T11:35:49.212+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/project_01_dag.py", line 221, in send_dataframe_to_kafka
+    producer = KafkaProducer(
+               ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py", line 481, in __init__
+    client = self.config['kafka_client'](
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/client_async.py", line 1074, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2025-08-01T11:35:49.221+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=world_population_ETL_dag_43, task_id=send_dataframe_to_kafka_task, run_id=scheduled__2025-07-31T00:00:00+00:00, execution_date=20250731T000000, start_date=20250801T113547, end_date=20250801T113549
+[2025-08-01T11:35:49.228+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-08-01T11:35:49.229+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 17 for task send_dataframe_to_kafka_task (NoBrokersAvailable; 206)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/project_01_dag.py", line 221, in send_dataframe_to_kafka
+    producer = KafkaProducer(
+               ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/producer/kafka.py", line 481, in __init__
+    client = self.config['kafka_client'](
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/client_async.py", line 1074, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2025-08-01T11:35:49.241+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-08-01T11:35:49.256+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-01T11:35:49.259+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

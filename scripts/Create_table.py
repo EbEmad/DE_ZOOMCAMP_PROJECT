@@ -3,43 +3,42 @@ import os
 
 def create_table():
     try:
-        # connect to postgres
-        conn=psycopg2.connect(
-
-            database="airflow",
-            user="airflow",
-            password="airflow",
-            host="postgres",
+        # Connect to PostgreSQL
+        conn = psycopg2.connect(
+            database=os.getenv("POSTGRES_DB"),
+            user=os.getenv("POSTGRES_USER"),
+            password=os.getenv("POSTGRES_PASSWORD"),
+            host="db",
             port="5432"
         )
-        cursor = conn.cursor()
 
+        cursor = conn.cursor()
         print("✅ Connected to PostgreSQL")
 
-
-        # create table
-        create_table_query = """ 
-            create table if not exists world_population(
-            index int,
-            country varchar(150),
-            population int,
-            YearlyChange numeric(10,2),
-            netchange numeric(10,2),
-            density int,
-            land_area numeric(10,2),
-            migrants int,
-            fert_rate numeric(10,2),
-            median_age numeric(10,2),
-            urban_pop numeric(10,2),
-            world_share numeric(10,2)   
+        # Create the table if it doesn't exist
+        create_table_query = """
+            CREATE TABLE IF NOT EXISTS world_population (
+                country VARCHAR(150),
+                population INT,
+                ayearly_change NUMERIC(10, 2),
+                net_change NUMERIC(10, 2),
+                density INT,
+                land_area NUMERIC(10, 2),
+                migrants INT,
+                fert_rate NUMERIC(10, 2),
+                med_age NUMERIC(10, 2),
+                urban_pop INT,
+                world_share NUMERIC(10, 2),
+                ins_date VARCHAR(50),
+                received_at TIMESTAMP DEFAULT NOW()
             );
         """
         cursor.execute(create_table_query)
         conn.commit()
-        print("✅ Table created successfully")
+        print("✅ Table created or already exists.")
     except Exception as e:
-        print(f"❌ Error creating table: {e}")
+        print(f"🚨 Error creating table: {e}")
     finally:
         cursor.close()
         conn.close()
-        print("✅ PostgreSQL connection closed") 
+ 
