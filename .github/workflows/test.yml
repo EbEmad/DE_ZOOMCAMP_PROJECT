@@ -3,8 +3,12 @@ name: Test Docker Compose
 on:
   push:
     branches: [master]
+    paths:
+      - "docker-compose.yml"
   pull_request:
     branches: [main]
+    paths:
+      - "docker-compose.yml"
 
 jobs:
   docker-compose-test:

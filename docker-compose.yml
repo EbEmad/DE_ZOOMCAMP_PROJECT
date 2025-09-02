@@ -16,7 +16,7 @@ services:
 
   kafka:
     build:
-      context: ./kafka
+      context: ./services/kafka
       dockerfile: Dockerfile
     image: my-kafka-custom
     container_name: kafka
@@ -82,7 +82,7 @@ services:
 
   webserver:
     build:
-      context: ./airflow
+      context: ./services/airflow
       dockerfile: Dockerfile
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
@@ -107,7 +107,7 @@ services:
 
   scheduler:
     build:
-      context: ./airflow
+      context: ./services/airflow
       dockerfile: Dockerfile
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
@@ -127,6 +127,17 @@ services:
     command: scheduler
     networks:
       - realtime
+  
+  terraform:
+    build:
+      context: ./services/terraform
+      dockerfile: Dockerfile
+    image: ubuntu:latest
+    container_name: terraform
+    volumes:
+      - ./services/terraform:/terraform
+      - ./data:/terraform/data
+    working_dir: /terraform
 networks:
   realtime:
     driver: bridge
