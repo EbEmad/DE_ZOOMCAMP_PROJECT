@@ -15,21 +15,16 @@ def consume_and_insert():
             os.getenv("KAFKA_TOPIC", "ETL-PROJECT"),
             bootstrap_servers=['kafka:9092'],
             auto_offset_reset='earliest',
-            enable_auto_commit=False,
-            value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-            group_id='etl-consumer-group',
-            client_id=f'etl-consumer-client-{str(uuid.uuid4())}',
-            session_timeout_ms=30000,
-            heartbeat_interval_ms=10000,
-            max_poll_interval_ms=300000
+            enable_auto_commit=True,
+            value_deserializer=lambda m: json.loads(m.decode('utf-8'))
         )
         
-        print("📡 Kafka consumer started. Waiting for partition assignment...")
+        print(" Kafka consumer started. Waiting for partition assignment...")
         
         # Wait for partition assignment
         consumer.poll(timeout_ms=10000)
         if not consumer.assignment():
-            print("⚠️ No partitions assigned after 10 seconds")
+            print(" No partitions assigned after 10 seconds")
             return
 
         # Connect to PostgreSQL
@@ -38,16 +33,16 @@ def consume_and_insert():
             user=os.getenv("POSTGRES_USER"),
             password=os.getenv("POSTGRES_PASSWORD"),
             host="db",
-            port="5432"
+            port="5433"
         )
         cursor = conn.cursor()
-        print("✅ Connected to PostgreSQL")
+        print("Connected to PostgreSQL")
 
         # Process messages
         for message in consumer:
             try:
                 if not message.value:
-                    print("⚠️ Empty message received")
+                    print(" Empty message received")
                     continue
                     
                 record = message.value
@@ -58,7 +53,7 @@ def consume_and_insert():
                                  'med_age', 'urban_pop', 'world_share', 'ins_date']
                 
                 if not all(field in record for field in required_fields):
-                    print(f"⚠️ Missing fields in message: {record}")
+                    print(f" Missing fields in message: {record}")
                     continue
                 
                 # Insert into PostgreSQL
@@ -89,19 +84,19 @@ def consume_and_insert():
                 # Manually commit offset
                 consumer.commit()
                 
-                print(f"📥 Inserted record: {record['country']}")
+                print(f" Inserted record: {record['country']}")
                 
             except KeyError as e:
-                print(f"🚨 Missing expected field in message: {e}")
+                print(f" Missing expected field in message: {e}")
                 if conn:
                     conn.rollback()
             except Exception as e:
-                print(f"🚨 Error processing message: {e}")
+                print(f" Error processing message: {e}")
                 if conn:
                     conn.rollback()
                 
     except Exception as e:
-        print(f"🚨 Critical error: {e}")
+        print(f" Critical error: {e}")
     finally:
         if cursor:
             cursor.close()
@@ -109,4 +104,4 @@ def consume_and_insert():
             conn.close()
         if consumer:
             consumer.close()
-        print("🔌 Resources cleaned up")
+        print(" Resources cleaned up")

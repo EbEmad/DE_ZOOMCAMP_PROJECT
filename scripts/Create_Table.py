@@ -9,15 +9,16 @@ def create_table():
             user=os.getenv("POSTGRES_USER"),
             password=os.getenv("POSTGRES_PASSWORD"),
             host="db",
-            port="5432"
+            port="5433"
         )
 
         cursor = conn.cursor()
-        print("✅ Connected to PostgreSQL")
+        print(" Connected to PostgreSQL")
 
         # Create the table if it doesn't exist
         create_table_query = """
             CREATE TABLE IF NOT EXISTS world_population (
+                id SERIAL PRIMARY KEY,
                 country VARCHAR(150),
                 population INT,
                 ayearly_change NUMERIC(10, 2),
@@ -35,9 +36,9 @@ def create_table():
         """
         cursor.execute(create_table_query)
         conn.commit()
-        print("✅ Table created or already exists.")
+        print("Table created or already exists.")
     except Exception as e:
-        print(f"🚨 Error creating table: {e}")
+        print(f" Error creating table: {e}")
     finally:
         cursor.close()
         conn.close()

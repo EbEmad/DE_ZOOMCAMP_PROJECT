@@ -1,8 +1,8 @@
 import pandas as pd
 import os
-from get_data import fetch_data
+from scripts.Fetch_Data import fetch_data
 from datetime import datetime
-def transform_data(doc, **kwargs):
+def process_data(doc, **kwargs):
     try:
         order = []
         country = []
