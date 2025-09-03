@@ -9,7 +9,7 @@ load_dotenv()
 
 def retrieve_rows():
     try:
-        conn_string = f'postgresql+psycopg2://root:root@db:5432/test'
+        conn_string = f'postgresql+psycopg2://root:root@db:5433/test'
         engine = create_engine(conn_string)
         with engine.connect() as conn:
             # Create a SQLAlchemy text object for your query

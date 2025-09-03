@@ -8,7 +8,8 @@ from scripts.Kafka_Producer import send_df_to_kafka
 from scripts.Create_Table import create_table
 from scripts.Consume_Insert import consume_and_insert
 from scripts.Check_Table import check_table
-
+from scripts.Retrive_Rows import retrieve_rows
+from scripts.Get_File import get_csv_file
 
 # Define the default arguments for the DAG
 default_args = {
