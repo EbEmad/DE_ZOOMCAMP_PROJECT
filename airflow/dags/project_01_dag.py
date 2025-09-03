@@ -7,6 +7,7 @@ from scripts.Process_Data import process_data
 from scripts.Kafka_Producer import send_df_to_kafka
 from scripts.Create_Table import create_table
 from scripts.Consume_Insert import consume_and_insert
+from scripts.Check_Table import check_table
 
 
 # Define the default arguments for the DAG
