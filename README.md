@@ -3,7 +3,7 @@
 ### ETL Pipeline
 
 #### Overview
-This project is a fully automated ETL (Extract, Transform, Load) pipeline designed to extract data from a website, process it using Apache Airflow, and store it in PostgreSQL and Google BigQuery. It supports both batch processing and real-time data streaming using Kafka. The entire system is containerized using Docker and managed via Docker Compose.
+This project is a fully automated ETL (Extract, Transform, Load) pipeline designed to extract data from a website, process it using Apache Airflow, and store it in PostgreSQL and AWS S3. It supports both batch processing and real-time data streaming using Kafka. The entire system is containerized using Docker and managed via Docker Compose.
 
 #### Data Source
 The project use open data source provided by Worldometers. For simplicity, the project uses:
@@ -19,7 +19,7 @@ The project use open data source provided by Worldometers. For simplicity, the p
 * Automates Kafka task to fetch and insert data in POstgreSQL database.
 #### 3. Data Storage and Processing
 * PostgreSQL acts as the intermediate storage layer.
-* Google BigQuery is used for scalable data analytics.
+* AWS S3 is used for scalable data analytics.
 #### 4. Real-Time Streaming with Kafka
 * Uses Kafka topics to stream data from PostgreSQL to BigQuery.
 * Data ingested from Python Dataframe and PostgreSQL as consumer.
@@ -31,7 +31,7 @@ The project use open data source provided by Worldometers. For simplicity, the p
 * Each service runs in its own isolated container.
 
 ### Flow Architecture:
-![Diagram](images/structure.png)
+![Diagram](images/Structure.png)
 
 ![Diagram](images/pipeline.png)
 
@@ -42,7 +42,7 @@ The project use open data source provided by Worldometers. For simplicity, the p
 * Python
 * Airflow
 * PostgreSQL
-* Google Cloud SDK (for BigQuery authentication)
+* AWS CLI (for S3 authentication)
 
 ### Setup Instructions:
 1) Clone the Repository
