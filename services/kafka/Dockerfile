@@ -1,4 +1,4 @@
-FROM bitnami/kafka:3.6.1
+FROM bitnami/kafka:3.7
 
 USER root
 
