@@ -46,7 +46,7 @@ The project use open data source provided by Worldometers. For simplicity, the p
 
 ### Setup Instructions:
 1) Clone the Repository
-   * ```git clone https://github.com/Giko20/DataTalks-Data-Engineering-Project.git/```
+   * ```git clone https://github.com/EbEmad/DE_ZOOMCAMP_PROJECT.git```
    * ```cd DataTalks-Data_Engineering-Project```
 2) Set Up Environment Variables
    Create a ```.env``` file in the project directory and configure it with your details:
