@@ -7,7 +7,6 @@ services:
     container_name: kafka
     ports:
       - "9092:9092"
-      - "29092:29092"
     environment:
       - KAFKA_ENABLE_KRAFT=yes
       - KAFKA_CFG_NODE_ID=1
@@ -37,6 +36,18 @@ services:
       wait"
     networks:
       - realtime
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+    ports:
+      - "8085:8080"
+    depends_on:
+      - kafka
+    networks:
+      - real-time
 
   db:
     image: postgres:13
