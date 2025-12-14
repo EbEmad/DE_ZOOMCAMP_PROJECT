@@ -15,7 +15,7 @@ The project use open data source provided by Worldometers. For simplicity, the p
 * Ensures data consistency before loading into the next stage.
 #### 2. Workflow Orchestration with Apache Airflow
 * Automates data extraction, transformation, and loading.
-* Automates Terraform task and uploading data to BigQuery.
+* Automates Terraform task and uploading data to S3.
 * Automates Kafka task to fetch and insert data in POstgreSQL database.
 #### 3. Data Storage and Processing
 * PostgreSQL acts as the intermediate storage layer.
@@ -24,7 +24,7 @@ The project use open data source provided by Worldometers. For simplicity, the p
 * Uses Kafka topics to stream data from PostgreSQL to BigQuery.
 * Data ingested from Python Dataframe and PostgreSQL as consumer.
 #### 5. Infrastructure as Code (IaC) with Terraform
-* Terraform scripts automate the setup of BigQuery resources and uploads data in it.
+* Terraform scripts automate the setup of S3 resources and uploads data in it.
 * Automated reproducible deployment.
 #### 6. Containerized Deployment
 * Uses Docker Compose to manage PostgreSQL, Kafka, Airflow, and Terraform.
